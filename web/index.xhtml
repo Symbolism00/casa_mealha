@@ -7,7 +7,15 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
    <h:form>
-      <h:inputText value="#{testBean.testRecipient.text}" style="width: 500px"/>
-      <h:commandButton value="CARREGA" style="margin-left: 10px" action="#{testBean.saveTestRecipient()}"/>
+      <!--isto está muito feio, não é suposto seguir isto-->
+      <p:outputPanel>
+         <h:outputText value="Nome do Produto: "/>
+         <h:inputText value="#{produtoBean.produtoRecipient.nome}" style="width: 50px"/><br/><br/>
+         <h:outputText value="Descrição do Produto: "/>
+         <h:inputText value="#{produtoBean.produtoRecipient.descricao}" style="width: 200px"/><br/><br/>
+         <h:outputText value="Preço do Produto: "/>
+         <h:inputText value="#{produtoBean.produtoRecipient.preco}" style="width: 20px" type="number"/><br/><br/>
+         <h:commandButton value="Guardar" style="margin-left: 10px" action="#{produtoBean.saveProdutoRecipient()}"/>
+      </p:outputPanel>
    </h:form>
 </html>

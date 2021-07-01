@@ -8,7 +8,7 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/casa_mealha?useSSL=false</property>
         <property name="connection.username">root</property>
         <property name="connection.password">casa_mealha2021</property>
-        <!-- JDBC connection pool settings … using built-in test pool -->
+        <!-- JDBC connection pool settings … using built-in produto pool -->
         <property name="connection.pool_size">1</property>
         <!-- Select our SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -17,7 +17,7 @@
         <!-- Set the current session context -->
         <property name="current_session_context_class">thread</property>
 
-        <mapping class="backoffice.model.Test"/>
+        <mapping class="backoffice.model.Produto"/>
 
     </session-factory>
 </hibernate-configuration>
